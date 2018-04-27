@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yguard version="1.5">
+<!--
+  yGuard Bytecode Obfuscator, v2.6, a Product of yWorks GmbH - http://www.yworks.com
+
+  Logfile created on Thu Apr 26 12:00:59 CST 2018
+
+  Jar file to be obfuscated:           yguard_temp_306921286761778671.jar
+  Target Jar file for obfuscated code: com.heel.wx.jar
+
+-->
+<!-- WARNING - identifier from script file not found in JAR: com/guojs/wx/OfficialAccounts/main -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
+<!--
+  Memory in use after class data structure built: 11472400 bytes
+  Total memory available                        : 74448896 bytes
+-->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletResponse not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletResponse not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServlet -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletRequest -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletRequest -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletResponse -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletRequest -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletRequest -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: No mapping found: org.dom4j.io.SAXReader -->
+<!-- WARNING: No mapping found: javax.servlet.http.HttpServletRequest -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.ServletInputStream not found! -->
+<!-- WARNING: No mapping found: org.dom4j.io.SAXReader -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.Document not found! -->
+<!-- WARNING: No mapping found: org.dom4j.Document -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.Element not found! -->
+<!-- WARNING: No mapping found: org.dom4j.Element -->
+<!-- WARNING: No mapping found: org.dom4j.Element -->
+<!-- WARNING: No mapping found: org.dom4j.Element -->
+<!-- WARNING: No mapping found: org.dom4j.DocumentException -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.ServletException not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
+<!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletResponse not found! -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.DocumentException not found! -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.io.SAXReader not found! -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.Document not found! -->
+<!-- WARNING: Unresolved external dependency: org.dom4j.Element not found! -->
+<expose>
+  <class name="com.heel.utils.Config"/>
+  <field class="com.heel.utils.Config" name="_fileName"/>
+  <method class="com.heel.utils.Config" name="java.lang.String read(java.lang.String)"/>
+  <class name="com.heel.utils.Log"/>
+  <method class="com.heel.utils.Log" name="void error(java.lang.Exception)"/>
+  <method class="com.heel.utils.Log" name="void info(java.lang.String)"/>
+  <class name="com.heel.utils.Net"/>
+  <method class="com.heel.utils.Net" name="org.json.JSONObject httpsRequestGet(java.lang.String, java.lang.String)"/>
+  <method class="com.heel.utils.Net" name="org.json.JSONObject httpsRequest(java.lang.String, java.lang.String, java.lang.String)"/>
+  <class name="com.heel.utils.MD5"/>
+  <field class="com.heel.utils.MD5" name="hexDigits"/>
+  <method class="com.heel.utils.MD5" name="java.lang.String byteToHexString(byte)"/>
+  <method class="com.heel.utils.MD5" name="java.lang.String byteArrayToHexString(byte[])"/>
+  <method class="com.heel.utils.MD5" name="java.lang.String encode(java.lang.String, java.lang.String)"/>
+  <class name="com.heel.wx.server.Message"/>
+  <method class="com.heel.wx.server.Message" name="void doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"/>
+  <method class="com.heel.wx.server.Message" name="void doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"/>
+  <method class="com.heel.wx.server.Message" name="java.util.Map xmlToMap(javax.servlet.http.HttpServletRequest)"/>
+  <class name="com.heel.wx.pay.WXPayUtil"/>
+  <method class="com.heel.wx.pay.WXPayUtil" name="java.lang.String getHostIp()"/>
+  <method class="com.heel.wx.pay.WXPayUtil" name="java.lang.String createSign(java.util.SortedMap, java.lang.String)"/>
+  <class name="com.heel.wx.pay.WXPayParam"/>
+  <method class="com.heel.wx.pay.WXPayParam" name="java.util.Map pay(java.lang.String)"/>
+  <method class="com.heel.wx.pay.WXPayParam" name="java.util.Map prepay(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, java.lang.String, java.lang.String)"/>
+  <class name="com.heel.wx.pay.WXPay"/>
+  <field class="com.heel.wx.pay.WXPay" name="PAY_METHOD_JS"/>
+  <method class="com.heel.wx.pay.WXPay" name="org.json.JSONObject prepay(java.lang.String, java.lang.String, java.lang.String, long)"/>
+  <class name="com.heel.wx.JSAPITicket"/>
+  <field class="com.heel.wx.JSAPITicket" name="_instance"/>
+  <method class="com.heel.wx.JSAPITicket" name="java.lang.String value()"/>
+  <method class="com.heel.wx.JSAPITicket" name="java.lang.String refresh()"/>
+  <method class="com.heel.wx.JSAPITicket" name="com.heel.wx.JSAPITicket instance()"/>
+  <class name="com.heel.wx.AccessToken"/>
+  <field class="com.heel.wx.AccessToken" name="_instance"/>
+  <method class="com.heel.wx.AccessToken" name="void refreshAsNeed(java.lang.String)"/>
+  <method class="com.heel.wx.AccessToken" name="java.lang.String value()"/>
+  <method class="com.heel.wx.AccessToken" name="java.lang.String refresh()"/>
+  <method class="com.heel.wx.AccessToken" name="void refreshForced()"/>
+  <method class="com.heel.wx.AccessToken" name="com.heel.wx.AccessToken instance()"/>
+  <class name="com.heel.wx.WXParam"/>
+  <method class="com.heel.wx.WXParam" name="org.json.JSONObject config(java.lang.String)"/>
+  <class name="com.heel.wx.OfficialAccounts"/>
+  <method class="com.heel.wx.OfficialAccounts" name="java.lang.String accessToken()"/>
+  <method class="com.heel.wx.OfficialAccounts" name="java.lang.String ticket()"/>
+  <method class="com.heel.wx.OfficialAccounts" name="void checkAccessToken(java.lang.String)"/>
+  <method class="com.heel.wx.OfficialAccounts" name="org.json.JSONObject configParam(java.lang.String)"/>
+  <method class="com.heel.wx.OfficialAccounts" name="org.json.JSONObject prepay(java.lang.String, java.lang.String, java.lang.String, long)"/>
+  <method class="com.heel.wx.OfficialAccounts" name="org.json.JSONObject oauth2AccessToken(java.lang.String)"/>
+  <class name="com.heel.wx.WXConfig"/>
+  <field class="com.heel.wx.WXConfig" name="_apiKey"/>
+  <field class="com.heel.wx.WXConfig" name="_mchId"/>
+  <field class="com.heel.wx.WXConfig" name="_appId"/>
+  <field class="com.heel.wx.WXConfig" name="_notifyUrl"/>
+  <field class="com.heel.wx.WXConfig" name="_appSecret"/>
+  <method class="com.heel.wx.WXConfig" name="java.lang.String apiKey()"/>
+  <method class="com.heel.wx.WXConfig" name="java.lang.String appSecret()"/>
+  <method class="com.heel.wx.WXConfig" name="java.lang.String notifyUrl()"/>
+  <method class="com.heel.wx.WXConfig" name="java.lang.String mchId()"/>
+  <method class="com.heel.wx.WXConfig" name="java.lang.String appId()"/>
+  <class name="com.heel.wx.WXObject"/>
+  <field class="com.heel.wx.WXObject" name="_value"/>
+  <field class="com.heel.wx.WXObject" name="_expireTime"/>
+  <method class="com.heel.wx.WXObject" name="java.lang.String get()"/>
+  <method class="com.heel.wx.WXObject" name="java.lang.String value()"/>
+  <method class="com.heel.wx.WXObject" name="java.lang.String refresh()"/>
+  <method class="com.heel.wx.WXObject" name="boolean needRefresh()"/>
+  <class name="com.heel.wx.WXRequest"/>
+  <method class="com.heel.wx.WXRequest" name="boolean invalidAccessToken(org.json.JSONObject)"/>
+  <method class="com.heel.wx.WXRequest" name="org.json.JSONObject oauth2AccessToken(java.lang.String)"/>
+  <method class="com.heel.wx.WXRequest" name="org.json.JSONObject jsapiTicket()"/>
+  <method class="com.heel.wx.WXRequest" name="org.json.JSONObject accessToken()"/>
+  <class name="com.heel.wx.WXErrCode"/>
+  <method class="com.heel.wx.WXErrCode" name="java.lang.Long InvalidAccessToken()"/>
+  <class name="com.heel.wx.WXUtil"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.String byteToHex(byte[])"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.String getChildrenText(org.w3c.dom.NodeList)"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.Long timeStamp()"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.String getRequestXml(java.util.Map)"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.String httpsRequestPost(java.lang.String, java.lang.String)"/>
+  <method class="com.heel.wx.WXUtil" name="java.util.Map httpsRequest(java.lang.String, java.util.Map)"/>
+  <method class="com.heel.wx.WXUtil" name="java.util.Map doXMLParse(java.lang.String)"/>
+  <method class="com.heel.wx.WXUtil" name="java.lang.String createNonceStr()"/>
+</expose>
+<map>
+  <field class="com.heel.utils.Log" name="_logger" map="A"/>
+</map>
+</yguard>

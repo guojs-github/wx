@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="GB2312"?> 
+<!--default 是默认执行的任务-->
+<project name="com.guojs.wx" default="addition" basedir=".">
+  <description>
+	编译并发布开发包
+  </description>
+  <!-- 文件目录定义 -->
+  <property name="srcSource" location="../src"/>
+  <property name="src" location="src"/>
+  <property name="classes" location="classes"/>
+  <property name="release" location="release"/>
+  <property name="javac.debug" value="on" />
+  <property name="javac.optimize" value="on" />
+  <property name="shrinkLog" value="${release}/shrink.log" />
+  <property name="obfLog" value="${release}/obflog.xml" />
+  <property name="debugJar" value="${release}/com.heel.wx.debug.jar" />
+  <property name="releaseJar" value="${release}/com.heel.wx.jar" />
+
+  <target name="clean" description="删除原有数据">
+    <delete dir="${src}"/>
+    <delete dir="${classes}"/>
+    <delete dir="${release}"/>
+  </target>
+ 
+  <target name="init" depends="clean" description="初始化">
+    <!-- Create the time stamp -->
+    <tstamp/>
+	<!-- 初始化目录 -->
+    <mkdir dir="${src}"/>
+    <mkdir dir="${classes}"/>
+    <mkdir dir="${release}"/>
+    <!-- 复制源代码 -->
+	<copy toDir="${src}">
+		<fileset dir="${srcSource}"/>
+    </copy>
+  </target>
+
+   <target name="compile" depends="init" description="编译">
+    <!-- 编译Heel includeAntRuntime="false"是为了去掉用ant新版本导致的一些警告-->
+    <javac srcdir="${src}" destdir="${classes}" optimize="${javac.optimize}" debug="${javac.debug}" failonerror="true" includeAntRuntime="false">
+		<!--给编译器指定编码，防止出现："警告： 编码 GBK 的不可映射字符"-->
+		<compilerarg line="-encoding UTF-8 "/>
+		<classpath>
+			<fileset dir="..\lib"/>
+		</classpath>		
+	</javac>
+  </target>
+
+  <target name="release" depends="compile" description="打包">
+    <jar jarfile="${debugJar}" basedir="${classes}"/>
+  </target>
+
+  <target name="yguard" depends="release">
+    <taskdef name="yguard" classname="com.yworks.yguard.YGuardTask" classpath="yguard.jar"/>
+    <yguard>
+	  <inoutpair in="${debugJar}" out="${releaseJar}"/>
+
+	  <externalclasses>
+        <pathelement location="../lib/slf4j-api-1.7.7.jar"/>
+        <pathelement location="../lib/slf4j-log4j12-1.7.5.jar"/>
+        <pathelement location="../lib/json-20131018.jar"/>
+      </externalclasses>
+      <!-- don't let the obfuscator remove the "Deprecated" -->
+      <!-- attributes from the .class file entries -->
+      <attribute name="Deprecated"/>
+
+      <shrink logfile="${shrinkLog}">
+        <keep>
+          <class classes="protected" methods="protected" fields="protected"/>
+        </keep>
+      </shrink>
+
+      <rename mainclass="com.guojs.wx.OfficialAccounts" logfile="${obfLog}">
+        <keep>
+          <class classes="protected" methods="protected" fields="protected"/>
+        </keep>
+      </rename>
+	  
+   	</yguard>
+  </target>
+
+  <target name="addition" depends="yguard" description="补充文件">
+    <copy file="${src}\com.heel.properties" todir="${release}"/>
+  </target>
+
+</project>

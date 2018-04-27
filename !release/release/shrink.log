@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yshrink version="0.1">
+<!-- parsing D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar -->
+<!-- WARNING:Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
+<entrypoints>
+	<class name="com.heel.utils.Net" />
+	<method signature="void &lt;init&gt;()" class="com.heel.utils.Net" />
+	<method signature="org.json.JSONObject httpsRequest(java.lang.String,java.lang.String,java.lang.String)" class="com.heel.utils.Net" />
+	<method signature="org.json.JSONObject httpsRequestGet(java.lang.String,java.lang.String)" class="com.heel.utils.Net" />
+	<class name="com.heel.utils.MD5" />
+	<method signature="java.lang.String byteToHexString(byte)" class="com.heel.utils.MD5" />
+	<method signature="void &lt;init&gt;()" class="com.heel.utils.MD5" />
+	<method signature="java.lang.String byteArrayToHexString(byte[])" class="com.heel.utils.MD5" />
+	<method signature="java.lang.String encode(java.lang.String,java.lang.String)" class="com.heel.utils.MD5" />
+	<field name="hexDigits" class="com.heel.utils.MD5" />
+	<class name="com.heel.wx.WXConfig" />
+	<method signature="java.lang.String mchId()" class="com.heel.wx.WXConfig" />
+	<method signature="java.lang.String appId()" class="com.heel.wx.WXConfig" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXConfig" />
+	<method signature="java.lang.String apiKey()" class="com.heel.wx.WXConfig" />
+	<method signature="java.lang.String appSecret()" class="com.heel.wx.WXConfig" />
+	<method signature="java.lang.String notifyUrl()" class="com.heel.wx.WXConfig" />
+	<field name="_mchId" class="com.heel.wx.WXConfig" />
+	<field name="_apiKey" class="com.heel.wx.WXConfig" />
+	<field name="_notifyUrl" class="com.heel.wx.WXConfig" />
+	<field name="_appId" class="com.heel.wx.WXConfig" />
+	<field name="_appSecret" class="com.heel.wx.WXConfig" />
+	<class name="com.heel.wx.AccessToken" />
+	<method signature="void refreshAsNeed(java.lang.String)" class="com.heel.wx.AccessToken" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.AccessToken" />
+	<method signature="void refreshForced()" class="com.heel.wx.AccessToken" />
+	<method signature="com.heel.wx.AccessToken instance()" class="com.heel.wx.AccessToken" />
+	<method signature="java.lang.String refresh()" class="com.heel.wx.AccessToken" />
+	<method signature="java.lang.String value()" class="com.heel.wx.AccessToken" />
+	<field name="_instance" class="com.heel.wx.AccessToken" />
+	<class name="com.heel.wx.WXObject" />
+	<method signature="java.lang.String get()" class="com.heel.wx.WXObject" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXObject" />
+	<method signature="boolean needRefresh()" class="com.heel.wx.WXObject" />
+	<method signature="java.lang.String refresh()" class="com.heel.wx.WXObject" />
+	<method signature="java.lang.String value()" class="com.heel.wx.WXObject" />
+	<field name="_expireTime" class="com.heel.wx.WXObject" />
+	<field name="_value" class="com.heel.wx.WXObject" />
+	<class name="com.heel.wx.WXRequest" />
+	<method signature="org.json.JSONObject oauth2AccessToken(java.lang.String)" class="com.heel.wx.WXRequest" />
+	<method signature="org.json.JSONObject accessToken()" class="com.heel.wx.WXRequest" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXRequest" />
+	<method signature="boolean invalidAccessToken(org.json.JSONObject)" class="com.heel.wx.WXRequest" />
+	<method signature="org.json.JSONObject jsapiTicket()" class="com.heel.wx.WXRequest" />
+	<class name="com.heel.wx.pay.WXPayParam" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.pay.WXPayParam" />
+	<method signature="java.util.Map pay(java.lang.String)" class="com.heel.wx.pay.WXPayParam" />
+	<method signature="java.util.Map prepay(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String)" class="com.heel.wx.pay.WXPayParam" />
+	<class name="com.heel.utils.Log" />
+	<method signature="void error(java.lang.Exception)" class="com.heel.utils.Log" />
+	<method signature="void &lt;init&gt;()" class="com.heel.utils.Log" />
+	<method signature="void info(java.lang.String)" class="com.heel.utils.Log" />
+	<class name="com.heel.wx.WXParam" />
+	<method signature="org.json.JSONObject config(java.lang.String)" class="com.heel.wx.WXParam" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXParam" />
+	<class name="com.heel.wx.pay.WXPay" />
+	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long)" class="com.heel.wx.pay.WXPay" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.pay.WXPay" />
+	<field name="PAY_METHOD_JS" class="com.heel.wx.pay.WXPay" />
+	<class name="com.heel.wx.WXErrCode" />
+	<method signature="java.lang.Long InvalidAccessToken()" class="com.heel.wx.WXErrCode" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXErrCode" />
+	<class name="com.heel.wx.JSAPITicket" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.JSAPITicket" />
+	<method signature="java.lang.String refresh()" class="com.heel.wx.JSAPITicket" />
+	<method signature="com.heel.wx.JSAPITicket instance()" class="com.heel.wx.JSAPITicket" />
+	<method signature="java.lang.String value()" class="com.heel.wx.JSAPITicket" />
+	<field name="_instance" class="com.heel.wx.JSAPITicket" />
+	<class name="com.heel.wx.OfficialAccounts" />
+	<method signature="org.json.JSONObject oauth2AccessToken(java.lang.String)" class="com.heel.wx.OfficialAccounts" />
+	<method signature="void checkAccessToken(java.lang.String)" class="com.heel.wx.OfficialAccounts" />
+	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long)" class="com.heel.wx.OfficialAccounts" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.OfficialAccounts" />
+	<method signature="java.lang.String ticket()" class="com.heel.wx.OfficialAccounts" />
+	<method signature="org.json.JSONObject configParam(java.lang.String)" class="com.heel.wx.OfficialAccounts" />
+	<method signature="java.lang.String accessToken()" class="com.heel.wx.OfficialAccounts" />
+	<class name="com.heel.wx.pay.WXPayUtil" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.pay.WXPayUtil" />
+	<method signature="java.lang.String getHostIp()" class="com.heel.wx.pay.WXPayUtil" />
+	<method signature="java.lang.String createSign(java.util.SortedMap,java.lang.String)" class="com.heel.wx.pay.WXPayUtil" />
+	<class name="com.heel.wx.WXUtil" />
+	<method signature="java.util.Map doXMLParse(java.lang.String)" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.Long timeStamp()" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.String createNonceStr()" class="com.heel.wx.WXUtil" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXUtil" />
+	<method signature="java.util.Map httpsRequest(java.lang.String,java.util.Map)" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.String getRequestXml(java.util.Map)" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.String httpsRequestPost(java.lang.String,java.lang.String)" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.String byteToHex(byte[])" class="com.heel.wx.WXUtil" />
+	<method signature="java.lang.String getChildrenText(org.w3c.dom.NodeList)" class="com.heel.wx.WXUtil" />
+	<class name="com.heel.utils.Config" />
+	<method signature="java.lang.String read(java.lang.String)" class="com.heel.utils.Config" />
+	<method signature="void &lt;init&gt;()" class="com.heel.utils.Config" />
+	<field name="_fileName" class="com.heel.utils.Config" />
+	<class name="com.heel.wx.server.Message" />
+	<method signature="void &lt;init&gt;()" class="com.heel.wx.server.Message" />
+	<method signature="void doGet(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)" class="com.heel.wx.server.Message" />
+	<method signature="void doPost(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)" class="com.heel.wx.server.Message" />
+	<method signature="java.util.Map xmlToMap(javax.servlet.http.HttpServletRequest)" class="com.heel.wx.server.Message" />
+</entrypoints>
+
+<!-- WARNING:Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
+<!-- writing shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar to D:\workspace\heel\wx\!release\release\yguard_temp_306921286761778671.jar. -->
+<inOutPair in="D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar" out="D:\workspace\heel\wx\!release\release\yguard_temp_306921286761778671.jar">
+	<removed-code>
+		<field name="GET" class="com.heel.utils.Net" />
+		<field name="POST" class="com.heel.utils.Net" />
+		<field name="serialVersionUID" class="com.heel.wx.server.Message" />
+	</removed-code>
+	<removed-resources>
+	</removed-resources>
+<!-- 	shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar BY 18.17%. -->
+<!-- 	size before: 26 KB, size after: 21 KB. -->
+<!-- 	removed 0 classes, 0 methods, 3 fields, 0 resources. -->
+<!-- 	17 classes remaining of 17 total. -->
+</inOutPair>
+<!-- WARNING:Not all dependencies could be resolved. Please see the logfile for details. -->
+</yshrink>
+
