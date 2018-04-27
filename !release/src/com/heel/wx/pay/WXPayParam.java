@@ -5,6 +5,8 @@
 package com.heel.wx.pay;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedMap;
@@ -29,7 +31,8 @@ public class WXPayParam {
 			, String orderNO
 			, long amount
 			, String description
-			, String openId) throws IOException, ParserConfigurationException, SAXException {
+			, String openId
+			, String expireTime) throws IOException, ParserConfigurationException, SAXException {
 		Log.info("WXPayParam: prepay.");
 		String nonceStr = WXPayUtil.createNonceStr();
 		String spbillCreateIp = WXPayUtil.getHostIp();
@@ -45,6 +48,7 @@ public class WXPayParam {
 		map.put("out_trade_no", orderNO);
 		map.put("total_fee", String.valueOf(amount));
 		map.put("openid", openId);
+		map.put("time_expire", expireTime);
 		map.put("sign", WXPayUtil.createSign(map, apiKey));
 
 		return map;
@@ -68,5 +72,15 @@ public class WXPayParam {
 		return map;
 	}
 	
+	public static String expireTime(long timeout) {
+		Log.info("WXPayParam: expire time.");		
+
+		/* 超时时长控制在1分钟到1个小时之间，默认为半小时 */
+		long timeoutLength = ((60 <= timeout) && (3600 >= timeout)) ? timeout: 1800;
+		Date expireTime = new Date();
+		expireTime.setTime(expireTime.getTime() + timeoutLength * 1000); /* 计算超时时间 */		
+		
+		return (new SimpleDateFormat("yyyyMMddHHmmss")).format(expireTime);
+	}
 
 }

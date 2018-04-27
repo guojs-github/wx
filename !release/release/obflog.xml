@@ -3,9 +3,9 @@
 <!--
   yGuard Bytecode Obfuscator, v2.6, a Product of yWorks GmbH - http://www.yworks.com
 
-  Logfile created on Thu Apr 26 12:00:59 CST 2018
+  Logfile created on Fri Apr 27 10:42:27 CST 2018
 
-  Jar file to be obfuscated:           yguard_temp_306921286761778671.jar
+  Jar file to be obfuscated:           yguard_temp_7254685406629343465.jar
   Target Jar file for obfuscated code: com.heel.wx.jar
 
 -->
@@ -13,7 +13,7 @@
 <!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
 <!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
 <!--
-  Memory in use after class data structure built: 11472400 bytes
+  Memory in use after class data structure built: 11475512 bytes
   Total memory available                        : 74448896 bytes
 -->
 <!-- WARNING: Unresolved external dependency: javax.servlet.http.HttpServletRequest not found! -->
@@ -71,11 +71,12 @@
   <method class="com.heel.wx.pay.WXPayUtil" name="java.lang.String getHostIp()"/>
   <method class="com.heel.wx.pay.WXPayUtil" name="java.lang.String createSign(java.util.SortedMap, java.lang.String)"/>
   <class name="com.heel.wx.pay.WXPayParam"/>
+  <method class="com.heel.wx.pay.WXPayParam" name="java.util.Map prepay(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, java.lang.String, java.lang.String, java.lang.String)"/>
   <method class="com.heel.wx.pay.WXPayParam" name="java.util.Map pay(java.lang.String)"/>
-  <method class="com.heel.wx.pay.WXPayParam" name="java.util.Map prepay(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, long, java.lang.String, java.lang.String)"/>
+  <method class="com.heel.wx.pay.WXPayParam" name="java.lang.String expireTime(long)"/>
   <class name="com.heel.wx.pay.WXPay"/>
   <field class="com.heel.wx.pay.WXPay" name="PAY_METHOD_JS"/>
-  <method class="com.heel.wx.pay.WXPay" name="org.json.JSONObject prepay(java.lang.String, java.lang.String, java.lang.String, long)"/>
+  <method class="com.heel.wx.pay.WXPay" name="org.json.JSONObject prepay(java.lang.String, java.lang.String, java.lang.String, long, long)"/>
   <class name="com.heel.wx.JSAPITicket"/>
   <field class="com.heel.wx.JSAPITicket" name="_instance"/>
   <method class="com.heel.wx.JSAPITicket" name="java.lang.String value()"/>
@@ -91,6 +92,7 @@
   <class name="com.heel.wx.WXParam"/>
   <method class="com.heel.wx.WXParam" name="org.json.JSONObject config(java.lang.String)"/>
   <class name="com.heel.wx.OfficialAccounts"/>
+  <method class="com.heel.wx.OfficialAccounts" name="org.json.JSONObject prepay(java.lang.String, java.lang.String, java.lang.String, long, long)"/>
   <method class="com.heel.wx.OfficialAccounts" name="java.lang.String accessToken()"/>
   <method class="com.heel.wx.OfficialAccounts" name="java.lang.String ticket()"/>
   <method class="com.heel.wx.OfficialAccounts" name="void checkAccessToken(java.lang.String)"/>

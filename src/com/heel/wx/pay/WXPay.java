@@ -19,7 +19,7 @@ import com.heel.wx.WXConfig;
 public class WXPay {
 	protected static final String PAY_METHOD_JS = "JSAPI";
 
-	public static JSONObject prepay(String openId, String orderNO, String description, long amount) {
+	public static JSONObject prepay(String openId, String orderNO, String description, long amount, long timeout) {
 		Log.info("WX prepay.");
 		final String url = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
@@ -57,6 +57,8 @@ public class WXPay {
 			Log.info("apiKey:" + apiKey);
 			String notifyUrl = WXConfig.notifyUrl();			
 			Log.info("notifyUrl:" + notifyUrl);
+			String expireTime = WXPayParam.expireTime(timeout);
+			Log.info("expireTime:" + expireTime);
 			try {
 				// Prepare parameters
 				Map<String,String> param = WXPayParam.prepay(
@@ -69,6 +71,7 @@ public class WXPay {
 						, amount 
 						, description
 						, openId
+						, expireTime
 				);
 
 				// Request				
@@ -78,6 +81,7 @@ public class WXPay {
 				String prepayId = recvMap.get("prepay_id");				
 				Map<String,String> payParam = WXPayParam.pay(prepayId);
 				
+				payParam.put("time_expire", expireTime);
 				result = new JSONObject(payParam);
 			} catch (IOException | ParserConfigurationException | SAXException ex) {
 				Log.error(ex);

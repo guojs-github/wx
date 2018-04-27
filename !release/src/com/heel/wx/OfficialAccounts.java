@@ -31,11 +31,17 @@ public class OfficialAccounts {
 		
 		return  WXRequest.oauth2AccessToken(code);		
 	}
-	
-	public static JSONObject prepay(String openId, String orderNO, String description, long amount ) {
+
+	public static JSONObject prepay(String openId, String orderNO, String description, long amount) {
 		Log.info("prepay.");
 		
-		return WXPay.prepay(openId, orderNO, description, amount);
+		return WXPay.prepay(openId, orderNO, description, amount, 1800);
+	}
+
+	public static JSONObject prepay(String openId, String orderNO, String description, long amount, long timeout ) {
+		Log.info("prepay.");
+		
+		return WXPay.prepay(openId, orderNO, description, amount, timeout);
 	}
 	
 	public static JSONObject configParam(String url) {

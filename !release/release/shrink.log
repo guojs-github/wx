@@ -48,9 +48,10 @@
 	<method signature="boolean invalidAccessToken(org.json.JSONObject)" class="com.heel.wx.WXRequest" />
 	<method signature="org.json.JSONObject jsapiTicket()" class="com.heel.wx.WXRequest" />
 	<class name="com.heel.wx.pay.WXPayParam" />
+	<method signature="java.lang.String expireTime(long)" class="com.heel.wx.pay.WXPayParam" />
 	<method signature="void &lt;init&gt;()" class="com.heel.wx.pay.WXPayParam" />
 	<method signature="java.util.Map pay(java.lang.String)" class="com.heel.wx.pay.WXPayParam" />
-	<method signature="java.util.Map prepay(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String)" class="com.heel.wx.pay.WXPayParam" />
+	<method signature="java.util.Map prepay(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String)" class="com.heel.wx.pay.WXPayParam" />
 	<class name="com.heel.utils.Log" />
 	<method signature="void error(java.lang.Exception)" class="com.heel.utils.Log" />
 	<method signature="void &lt;init&gt;()" class="com.heel.utils.Log" />
@@ -59,8 +60,8 @@
 	<method signature="org.json.JSONObject config(java.lang.String)" class="com.heel.wx.WXParam" />
 	<method signature="void &lt;init&gt;()" class="com.heel.wx.WXParam" />
 	<class name="com.heel.wx.pay.WXPay" />
-	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long)" class="com.heel.wx.pay.WXPay" />
 	<method signature="void &lt;init&gt;()" class="com.heel.wx.pay.WXPay" />
+	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long,long)" class="com.heel.wx.pay.WXPay" />
 	<field name="PAY_METHOD_JS" class="com.heel.wx.pay.WXPay" />
 	<class name="com.heel.wx.WXErrCode" />
 	<method signature="java.lang.Long InvalidAccessToken()" class="com.heel.wx.WXErrCode" />
@@ -77,6 +78,7 @@
 	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long)" class="com.heel.wx.OfficialAccounts" />
 	<method signature="void &lt;init&gt;()" class="com.heel.wx.OfficialAccounts" />
 	<method signature="java.lang.String ticket()" class="com.heel.wx.OfficialAccounts" />
+	<method signature="org.json.JSONObject prepay(java.lang.String,java.lang.String,java.lang.String,long,long)" class="com.heel.wx.OfficialAccounts" />
 	<method signature="org.json.JSONObject configParam(java.lang.String)" class="com.heel.wx.OfficialAccounts" />
 	<method signature="java.lang.String accessToken()" class="com.heel.wx.OfficialAccounts" />
 	<class name="com.heel.wx.pay.WXPayUtil" />
@@ -105,8 +107,8 @@
 </entrypoints>
 
 <!-- WARNING:Unresolved external dependency: javax.servlet.http.HttpServlet not found! -->
-<!-- writing shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar to D:\workspace\heel\wx\!release\release\yguard_temp_306921286761778671.jar. -->
-<inOutPair in="D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar" out="D:\workspace\heel\wx\!release\release\yguard_temp_306921286761778671.jar">
+<!-- writing shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar to D:\workspace\heel\wx\!release\release\yguard_temp_7254685406629343465.jar. -->
+<inOutPair in="D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar" out="D:\workspace\heel\wx\!release\release\yguard_temp_7254685406629343465.jar">
 	<removed-code>
 		<field name="GET" class="com.heel.utils.Net" />
 		<field name="POST" class="com.heel.utils.Net" />
@@ -114,8 +116,8 @@
 	</removed-code>
 	<removed-resources>
 	</removed-resources>
-<!-- 	shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar BY 18.17%. -->
-<!-- 	size before: 26 KB, size after: 21 KB. -->
+<!-- 	shrinked D:\workspace\heel\wx\!release\release\com.heel.wx.debug.jar BY 18.30%. -->
+<!-- 	size before: 27 KB, size after: 22 KB. -->
 <!-- 	removed 0 classes, 0 methods, 3 fields, 0 resources. -->
 <!-- 	17 classes remaining of 17 total. -->
 </inOutPair>
